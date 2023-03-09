@@ -1,0 +1,113 @@
+header {
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    background-color: #ffffff;
+    padding: 0 0.25rem 0 1.5rem;
+    /* width: 72vw; */
+    max-width: 80%;
+    margin: 0 auto;
+    position: sticky;
+    top: 0;
+    margin-top: 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.logo p {
+    margin-left: 1.5rem;
+    margin-block: 0;
+}
+
+.logo p span {
+    display: block;
+    font-family: 'Michroma', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+}
+
+.logo p span:nth-child(2) {
+    font-size: 0.5rem;
+    /* text-align: end; */
+    margin-top: -0.25rem;
+}
+
+.mainNav {
+    margin-left: auto;
+}
+
+.mainNav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+.mainNav ul li {
+    margin: 0 1rem;
+}
+
+.mainNav ul li:first-child {
+    margin-left: 0;
+}
+
+.mainNav ul li:last-child {
+    margin-right: 0;
+}
+
+.mainNav ul li a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+}
+
+.mainNav ul li a:hover {
+    font-weight: bold;
+    border-color: #C31D1D;
+}
+
+.search {
+    margin-left: 2rem;  
+}
+
+.search svg {
+    display: block;
+    width: 25px;
+    height: 25px;
+}
+
+.divider {
+    width: 2px;
+    align-self: stretch;
+    margin: 10px 0;
+    background-color: #C3C3C3;
+}
+
+.language {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.language svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+}
+
+.language, .search {
+    padding: 0.75rem 1rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
