@@ -1,20 +1,78 @@
 header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     border-radius: 15px;
     background-color: #ffffff;
+    /* max-width: 72%; */
+    width: 80%;
     padding: 0 0.25rem 0 1.5rem;
-    /* width: 72vw; */
-    max-width: 80%;
     margin: 0 auto;
+    margin-top: 2rem;
     position: sticky;
     top: 0;
-    margin-top: 2rem;
+    /* top: 2rem; */
+    z-index: 1000;
+}
+
+.firstRow {
+    /* background-color: rgb(252, 242, 222); */
+    display: flex;
+    align-items: center;
+    /* flex-direction: row-reverse; */
+}
+
+.navIcon {
+    width: 35px;
+    height: 35px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.navIcon span {
+    display: block;
+    height: 4px;
+    width: 80%;
+    background: #b60d0a;
+    border-radius: 10px;
+
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+
+.navIcon.open span:nth-child(1) {
+    width: 100%;
+    -webkit-transform: rotate(45deg) translate(7px, 7px);
+    -moz-transform: rotate(45deg) translate(7px, 7px);
+    -o-transform: rotate(45deg) translate(7px, 7px);
+    -ms-transform: rotate(45deg) translate(7px, 7px);
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.navIcon.open span:nth-child(2) {
+    width: 0%;
+}
+
+.navIcon.open span:nth-child(3) {
+    width: 100%;
+    -webkit-transform: rotate(-45deg) translate(7px, -7px);
+    -moz-transform: rotate(-45deg) translate(7px, -7px);
+    -o-transform: rotate(-45deg) translate(7px, -7px);
+    transform: rotate(-45deg) translate(7px, -7px);
 }
 
 .logo {
     display: flex;
     align-items: center;
+    margin-right: auto;
 }
 
 .logo img {
@@ -32,17 +90,22 @@ header {
     font-family: 'Michroma', sans-serif;
     font-weight: bold;
     font-size: 1rem;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.15rem;
+    -webkit-text-stroke-width: 0.075rem;
 }
 
 .logo p span:nth-child(2) {
     font-size: 0.5rem;
-    /* text-align: end; */
-    margin-top: -0.25rem;
+    -webkit-text-stroke-width: 0.04rem;
+}
+
+.menuWrapper {
+    display: flex;
 }
 
 .mainNav {
-    margin-left: auto;
+    /* margin-left: auto; */
+    margin: 0 2rem;
 }
 
 .mainNav ul {
@@ -64,6 +127,7 @@ header {
 }
 
 .mainNav ul li a {
+    /* font-size: 1.05vw; */
     display: block;
     color: black;
     text-decoration: none;
@@ -75,39 +139,234 @@ header {
     border-color: #C31D1D;
 }
 
-.search {
-    margin-left: 2rem;  
-}
-
 .search svg {
     display: block;
     width: 25px;
     height: 25px;
 }
 
-.divider {
-    width: 2px;
-    align-self: stretch;
-    margin: 10px 0;
-    background-color: #C3C3C3;
-}
-
 .language {
     display: flex;
     align-items: center;
     font-size: 1rem;
+    color: black;
+    font-weight: 400;
+}
+
+.language::before {
+    content: "";
+    position: relative;
+    left: -0.6rem;
+    width: 2px;
+    height: 100%;
+    background-color: #C3C3C3;
 }
 
 .language svg {
     display: block;
-    width: 20px;
-    height: 20px;
-    margin-right: 0.5rem;
+    width: 19px;
+    height: 19px;
+}
+
+.language span {
+    margin-left: 0.5rem;
 }
 
 .language, .search {
     padding: 0.75rem 1rem;
-    border: none;
     background-color: transparent;
-    cursor: pointer;
+}
+
+@media only screen and (max-width: 1500px) {
+    
+    header {
+        width: 90%;
+        padding-left: 1rem;
+    }
+
+    .logo img {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .logo p {
+        margin-left: 1rem;
+    }
+    
+    .logo p span {
+        font-size: 0.9rem;
+        -webkit-text-stroke-width: 0.06rem;
+    }
+    
+    .logo p span:nth-child(2) {
+        font-size: 0.45rem;
+        -webkit-text-stroke-width: 0.033rem;
+    }
+
+    .mainNav {
+        margin: 0;
+    }
+
+    .mainNav ul {
+        margin-block: 0.75rem;
+    }
+
+    .mainNav ul li {
+        margin: 0 0.5rem;
+    }
+
+    .mainNav ul li a {
+        font-size: 0.9rem;
+    }
+
+    .search, .language {
+        padding: 0.75rem;
+    }
+
+    .search svg {
+        width: 23px;
+        height: 23px;
+    }
+
+    .language svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .language span {
+        font-size: 0.9rem;
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+    header {
+        padding-left: 0.75rem;
+    }
+
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .logo p {
+        margin-left: 0.75rem;
+    }
+    
+    .logo p span {
+        font-size: 0.85rem;
+        -webkit-text-stroke-width: 0.05rem;
+    }
+    
+    .logo p span:nth-child(2) {
+        font-size: 0.4rem;
+        -webkit-text-stroke-width: 0.03rem;
+    }
+
+    .mainNav ul {
+        margin-block: 0.65rem;
+    }
+
+    .mainNav ul li {
+        margin: 0 0.25rem;
+    }
+
+    .mainNav ul li a {
+        font-size: 0.8rem;
+    }
+
+    .search, .language {
+        padding: 0.6rem;
+    }
+
+    .search svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .language svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .language span {
+        display: none;
+    }
+    
+}
+
+@media only screen and (max-width: 787px) {
+    header {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0.5rem 0.75rem;
+    }
+    
+    .navIcon {
+        display: flex;
+    }
+
+    .menuWrapper {
+        display: none;
+    }
+
+    .menuWrapper.open {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .mainNav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .mainNav ul li, .search {
+        border-bottom: 1px solid #C3C3C3;
+    }
+
+    .mainNav ul li, .mainNav ul li:first-child, .mainNav ul li:last-child {
+        display: block;
+        width: 90%;
+        margin: 0;
+        padding: 1rem;
+        text-align: center;
+    }
+    
+    .mainNav ul li a {
+        font-size: 1rem;
+        display: inline-block;
+    }
+
+    .search {
+        border-radius: 0;
+    }
+
+    .search svg {
+        width: 25px;
+        height: 25px;
+        margin: 0 auto;
+    }
+    
+    .language {
+        justify-content: center;
+    }
+
+    .language::before {
+        content: none;
+    }
+    
+    .language svg {
+        width: 19px;
+        height: 19px;
+    }
+    
+    .language span {
+        display: block;
+        font-size: 1rem;
+    }
+    
+    .language, .search {
+        padding: 0.75rem;
+    }
+
 }

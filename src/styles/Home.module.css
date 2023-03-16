@@ -1,31 +1,43 @@
 .wrapper {
-    background-image: url('../assets/bg/bg-1.jpg');
+    /* background-image: url('../assets/bg/bg-1.jpg');
     background-repeat: no-repeat;
-    background-size: contain;
-    height: 100vh;
+    background-size: contain; */
+    /* width: 100%; */
+    /* height: 100vh; */
+    /* min-height: 50vh; */
     /* display: flex;
     align-items: center;
     justify-content: flex-start; */
+    /* background-position: center; */
     position: relative;
+}
+
+.img {
+    display: block;
+    width: 100%;
 }
 
 .info {
     /* max-width: 200px; */
     /* margin-left: auto; */
     /* width: 500px; */
-    max-width: 650px;
+    /* max-width: 650px; */
+    width: 32vw;
     /* background-color: blueviolet; */
     color: white;
-    position: relative;
-    top: 30%;
-    left: 50%;
+    position: absolute;
+    /* z-index: 1; */
+    top: 20vw;
+    left: 52%;
 }
 
 .info h1 {
     font-family: 'Michroma', sans-serif;
-    letter-spacing: 0.2rem;
-    font-size: 2.5rem;
+    /* letter-spacing: 0.2vw; */
+    font-size: 2.5vw;
     margin: 0;
+    -webkit-text-stroke-width: 0.15vw;
+    letter-spacing: 0.25vw;
 }
 
 .info h1 span {
@@ -34,19 +46,20 @@
 
 .info p {
     /* font-family: 'Inter', sans-serif; */
+    margin-block: 0;
     font-size: 1rem;
+    font-size: 1vw;
     /* word-break: break-all;
     white-space: normal; */
 }
 
 .actionButton {
-    border-radius: 20px;
-    padding: 1rem 3rem;
+    border-radius: 1vw;
+    padding: 1vw 2.75vw;
     background-color: white;
-    font-size: 1rem;
-    font-weight: 700;
+    color: black;
+    font-size: 1vw;
     margin: 0 auto;
-    margin-top: 3rem;
+    margin-top: 3vw;
     display: block;
-    cursor: pointer;
 }

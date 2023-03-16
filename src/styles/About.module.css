@@ -1,0 +1,312 @@
+.wrapper {
+    background-image: url('../assets/bg/bg-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 100vh; */
+    /* display: flex;
+    align-items: center;
+    justify-content: flex-start; */
+    /* position: relative; */
+    /* width: 100%; */
+    /* padding: 7.5%; */
+    overflow-x: hidden;
+    /* box-sizing: border-box; */
+    /* min-height: 1100px; */
+}
+
+.container {
+    /* outline: 10px solid violet; */
+    /* margin: 0 2rem; */
+    /* margin-bottom: 50px; */
+    /* padding: 4rem; */
+    /* height: 100%; */
+    display: grid;
+    /* grid-template-columns: 41% 51%; */
+    grid-template-columns: minmax(0, 0.45fr) minmax(0, 0.55fr);
+    grid-template-rows: repeat(2, auto);
+    /* grid-template-columns: 0.5fr 0.5fr; */
+    /* grid-template-rows: minmax(min-content, max-content) minmax(min-content, max-content); */
+    /* grid-template-rows: 60% 32%; */
+    /* align-items: start;
+    justify-items: center; */
+    justify-content: space-between;
+    /* gap: 8vh; */
+    gap: 6rem;
+    padding: 7.5%;
+
+    /* margin-bottom: 200px; */
+
+}
+
+/* .container > * {
+    margin: 0;
+} */
+
+.container * {
+    /* background-color: skyblue; */
+    min-height: 0;
+}
+
+.facility {
+    
+    display: grid;
+    grid-template-columns: 0.57fr 0.43fr;
+    grid-template-rows: auto auto;
+    gap: 1rem;
+    justify-items: center;
+    /* grid-template-columns: calc(60% - 10px) calc(40% - 10px); */
+    /* grid-template-columns: auto auto; */
+    /* align-items: center; */
+    /* background-color: blanchedalmond; */
+    /* max-width: 100px; */
+    /* width: 100%;
+    height: 100%; */
+}
+
+.facility > img {
+    border-radius: 30px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.facility img:nth-child(1) {
+    grid-column: 1 / -1;
+    border-radius: 20px;
+}
+
+.mainText {
+    justify-self: center;
+    padding: 6% 0;
+    /* max-width: 830px; */
+    /* overflow-y: auto; */
+    max-height: 100%;
+}
+
+.mainText h2 {
+    font-family: 'Michroma', sans-serif;
+    color: #E02323;
+    text-align: center;
+    font-size: 1.9rem;
+    margin: 0;
+    -webkit-text-stroke-width: 1.75px;
+    letter-spacing: 4px;
+}
+
+.mainText p {
+    font-size: 1rem;
+    /* font-size: 90%; */
+    text-align: justify;
+}
+
+.mainText button {
+    display: block;
+    margin: 0 auto;
+    background-color: rgba(200, 33, 33, 0.81);
+}   
+
+.shadow {
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+}
+
+.news {
+    padding: 0 5%;
+    outline: 2px solid red;
+    margin: 0 auto;
+}
+
+.news h3 {
+    font-family: 'Michroma', sans-serif;
+    font-size: 1rem;
+    margin: 0;
+    margin-bottom: -1.5%;
+    -webkit-text-stroke-width: 1px;
+    letter-spacing: 2.5px;
+}
+
+.news h2 {
+    font-family: 'Michroma', sans-serif;
+    color: #E02323;
+    /* text-align: center; */
+    text-align: justifys;
+    font-size: 2.1rem;
+    margin: 0;
+    -webkit-text-stroke-width: 2px;
+    letter-spacing: 4px;
+}
+
+.news p {
+    text-align: justify;
+    margin-top: 0;
+}
+
+.actionButtons {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 0.5rem;
+}
+
+.actionButtons button {
+    /* box-sizing: border-box; */
+    background-color: rgba(200, 33, 33, 0.81);
+    padding: 3% 6%;
+    font-size: 0.75rem;
+}
+
+.actionButtons button:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.81);
+    /* padding: 0.93rem 2rem; */
+}
+
+.actionButtons button svg {
+    display: block;
+    width: 0.9rem;
+    height: 0.9rem;
+    background-color: transparent;
+}
+
+.products {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 20px;
+    width: 100%;
+    height: 100%;
+    /* overflow-x: hidden; */
+    /* outline: 2px solid red; */
+}
+
+.products figure {
+    margin: 0;
+    background-color: #F5F5F5;
+    border-radius: 45px;
+    /* height: 100%; */
+}
+
+.products figure img {
+    border-radius: inherit;
+}
+
+.products figure figcaption {
+    font-size: 0.75rem;
+    padding: 0.5rem 0;
+    font-family: 'Michroma', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    background-color: transparent;
+}
+
+/* 900px */
+@media only screen and (max-width: 1200px) {
+    .container {
+        grid-template-columns: 1fr;
+        /* align-items: center; */
+    }
+
+    .facility {
+        grid-template-columns: auto;
+        /* height: 100%; */
+    }
+    
+    .mainText {
+        /* max-width: 830px; */
+        /* overflow-y: auto; */
+        /* max-height: 100%; */
+    }
+    
+    .mainText h2 {
+        text-align: center;
+        font-size: 1.75rem;
+        -webkit-text-stroke-width: 1.5px;
+    }
+    
+    .mainText p {
+        /* font-size: 0.9rem; */
+    }
+    
+    .mainText button {
+        font-size: 0.9rem;
+    }   
+    
+    .news {
+
+    }
+    
+    .news h3 {
+        font-size: 1rem;
+        margin: 0;
+        -webkit-text-stroke-width: 0.9px;
+        letter-spacing: 2.25px;
+    }
+    
+    .news h2 {
+        /* font-size: 1.75rem; */
+        font-size: 3.5vw;
+        -webkit-text-stroke-width: 2px;
+        letter-spacing: 4px;
+    }
+    
+    .news p {
+        font-size: 0.9rem;
+    }
+    
+    /* .actionButtons {
+    }
+    
+    .actionButtons button {
+        font-size: 0.8rem;
+        padding: 1rem 2rem;
+    }
+    
+    .actionButtons button:nth-child(2) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 0.5rem;
+        background-color: rgba(0, 0, 0, 0.81);
+        padding: 0.93rem 2rem;
+    }
+    
+    .actionButtons button svg {
+        display: block;
+        width: 0.9rem;
+        height: 0.9rem;
+        background-color: transparent;
+    }
+    
+    .products {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        column-gap: 20px;
+        width: 100%;
+    }
+    
+    .products figure {
+        margin: 0;
+        background-color: #F5F5F5;
+        border-radius: 45px;
+    }
+    
+    .products figure img {
+        border-radius: inherit;
+    }
+    
+    .products figure figcaption {
+        font-size: 0.75rem;
+        padding: 0.5rem 0;
+        font-family: 'Michroma', sans-serif;
+        font-weight: bold;
+        text-align: center;
+        background-color: transparent;
+    } */
+}
