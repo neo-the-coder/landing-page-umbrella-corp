@@ -2,65 +2,28 @@
     background-image: url('../assets/bg/bg-2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    /* height: 100vh; */
-    /* display: flex;
-    align-items: center;
-    justify-content: flex-start; */
-    /* position: relative; */
-    /* width: 100%; */
-    /* padding: 7.5%; */
     overflow-x: hidden;
-    /* box-sizing: border-box; */
-    /* min-height: 1100px; */
 }
 
 .container {
-    /* outline: 10px solid violet; */
-    /* margin: 0 2rem; */
-    /* margin-bottom: 50px; */
-    /* padding: 4rem; */
-    /* height: 100%; */
     display: grid;
-    /* grid-template-columns: 41% 51%; */
     grid-template-columns: minmax(0, 0.45fr) minmax(0, 0.55fr);
     grid-template-rows: repeat(2, auto);
-    /* grid-template-columns: 0.5fr 0.5fr; */
-    /* grid-template-rows: minmax(min-content, max-content) minmax(min-content, max-content); */
-    /* grid-template-rows: 60% 32%; */
-    /* align-items: start;
-    justify-items: center; */
     justify-content: space-between;
-    /* gap: 8vh; */
     gap: 6rem;
     padding: 7.5%;
-
-    /* margin-bottom: 200px; */
-
 }
 
-/* .container > * {
-    margin: 0;
+/* .container * {
+    min-height: 0;
 } */
 
-.container * {
-    /* background-color: skyblue; */
-    min-height: 0;
-}
-
-.facility {
-    
+.facility {  
     display: grid;
     grid-template-columns: 0.57fr 0.43fr;
     grid-template-rows: auto auto;
     gap: 1rem;
     justify-items: center;
-    /* grid-template-columns: calc(60% - 10px) calc(40% - 10px); */
-    /* grid-template-columns: auto auto; */
-    /* align-items: center; */
-    /* background-color: blanchedalmond; */
-    /* max-width: 100px; */
-    /* width: 100%;
-    height: 100%; */
 }
 
 .facility > img {
@@ -79,9 +42,7 @@
 .mainText {
     justify-self: center;
     padding: 6% 0;
-    /* max-width: 830px; */
-    /* overflow-y: auto; */
-    max-height: 100%;
+    /* max-height: 100%; */
 }
 
 .mainText h2 {
@@ -96,7 +57,6 @@
 
 .mainText p {
     font-size: 1rem;
-    /* font-size: 90%; */
     text-align: justify;
 }
 
@@ -114,7 +74,6 @@
 
 .news {
     padding: 0 5%;
-    outline: 2px solid red;
     margin: 0 auto;
 }
 
@@ -130,8 +89,6 @@
 .news h2 {
     font-family: 'Michroma', sans-serif;
     color: #E02323;
-    /* text-align: center; */
-    text-align: justifys;
     font-size: 2.1rem;
     margin: 0;
     -webkit-text-stroke-width: 2px;
@@ -164,7 +121,6 @@
     justify-content: center;
     column-gap: 0.5rem;
     background-color: rgba(0, 0, 0, 0.81);
-    /* padding: 0.93rem 2rem; */
 }
 
 .actionButtons button svg {
@@ -181,8 +137,6 @@
     column-gap: 20px;
     width: 100%;
     height: 100%;
-    /* overflow-x: hidden; */
-    /* outline: 2px solid red; */
 }
 
 .products figure {
@@ -205,32 +159,39 @@
     background-color: transparent;
 }
 
-/* 900px */
+
 @media only screen and (max-width: 1200px) {
+    .facility {
+        grid-template-columns: auto;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
     .container {
-        grid-template-columns: 1fr;
-        /* align-items: center; */
+        grid-template-columns: auto;
+        gap: 1rem;
     }
 
     .facility {
-        grid-template-columns: auto;
-        /* height: 100%; */
+        /* grid-template-columns: 0.65fr 0.35fr; */
+        /* grid-template-rows: 1fr 0.8fr; */
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
     }
     
-    .mainText {
-        /* max-width: 830px; */
-        /* overflow-y: auto; */
-        /* max-height: 100%; */
+    .facility img:nth-child(1) {
+        grid-column: auto;
     }
+
+    .facility img:nth-child(3) {
+        /* grid-column: 2; */
+        grid-row: 1 / -1;
+    }
+
     
     .mainText h2 {
-        text-align: center;
         font-size: 1.75rem;
         -webkit-text-stroke-width: 1.5px;
-    }
-    
-    .mainText p {
-        /* font-size: 0.9rem; */
     }
     
     .mainText button {
@@ -238,75 +199,67 @@
     }   
     
     .news {
-
+        margin-bottom: 1.5rem;
+        padding: 0;
     }
     
     .news h3 {
-        font-size: 1rem;
-        margin: 0;
-        -webkit-text-stroke-width: 0.9px;
-        letter-spacing: 2.25px;
+        font-size: 1.2rem;
+        margin-bottom: 0;
+    }
+
+    .news h3, .news h2 {
+        text-align: center;
     }
     
     .news h2 {
-        /* font-size: 1.75rem; */
-        font-size: 3.5vw;
-        -webkit-text-stroke-width: 2px;
-        letter-spacing: 4px;
+        font-size: 1.75rem;
+        margin-bottom: 0.25rem;
     }
     
-    .news p {
-        font-size: 0.9rem;
-    }
-    
-    /* .actionButtons {
+    .actionButtons {
+        justify-content: space-around;
     }
     
     .actionButtons button {
-        font-size: 0.8rem;
-        padding: 1rem 2rem;
+        font-size: 0.9rem;
+        padding: 0.8rem 1.6rem;
     }
-    
-    .actionButtons button:nth-child(2) {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        column-gap: 0.5rem;
-        background-color: rgba(0, 0, 0, 0.81);
-        padding: 0.93rem 2rem;
-    }
-    
+
     .actionButtons button svg {
-        display: block;
-        width: 0.9rem;
-        height: 0.9rem;
-        background-color: transparent;
+        width: 1.35rem;
+        height: 1.35rem;
     }
     
     .products {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        column-gap: 20px;
-        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 2rem;
     }
     
     .products figure {
-        margin: 0;
-        background-color: #F5F5F5;
-        border-radius: 45px;
+        margin: 0 auto;
     }
     
     .products figure img {
-        border-radius: inherit;
+        width: 100%;
     }
     
     .products figure figcaption {
-        font-size: 0.75rem;
-        padding: 0.5rem 0;
-        font-family: 'Michroma', sans-serif;
-        font-weight: bold;
-        text-align: center;
-        background-color: transparent;
-    } */
+        padding: 0;
+        padding-bottom: 0.25rem;
+    }
+}
+
+@media only screen and (max-width: 595px) {
+    .mainText h2 {
+        font-size: 1.5rem;
+        /* -webkit-text-stroke-width: 1.5px; */
+    }
+
+    .actionButtons button:nth-child(2) {
+        flex-direction: column;
+        row-gap: 0.25rem;
+        padding: 0.8rem;
+    }
 }

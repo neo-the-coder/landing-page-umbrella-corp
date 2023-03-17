@@ -4,6 +4,7 @@ header {
     justify-content: space-between;
     border-radius: 15px;
     background-color: #ffffff;
+    border-bottom: 1px solid #0a0a0a;
     /* max-width: 72%; */
     width: 80%;
     padding: 0 0.25rem 0 1.5rem;
@@ -16,10 +17,8 @@ header {
 }
 
 .firstRow {
-    /* background-color: rgb(252, 242, 222); */
     display: flex;
     align-items: center;
-    /* flex-direction: row-reverse; */
 }
 
 .navIcon {
