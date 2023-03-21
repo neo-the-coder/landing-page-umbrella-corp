@@ -4,6 +4,7 @@
     grid-template-columns: minmax(0, 0.72fr) minmax(0, 0.28fr);
     grid-template-rows: repeat(2, auto);
     gap: 4px;
+    padding-bottom: 4px;
 }
 
 .productContainer img {

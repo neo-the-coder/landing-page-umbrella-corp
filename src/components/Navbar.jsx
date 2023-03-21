@@ -33,22 +33,22 @@ const Navbar = () => {
         <nav className={styles.mainNav}>
           <ul>
             <li>
-              <a href="#">Home</a>
+              <a href="#home">Home</a>
             </li>
             <li>
-              <a href="#">About</a>
+              <a href="#about">About</a>
             </li>
             <li>
-              <a href="#">Products</a>
+              <a href="#products">Products</a>
             </li>
             <li>
-              <a href="#">Science</a>
+              <a href="#science">Science</a>
             </li>
             <li>
-              <a href="#">News</a>
+              <a href="#news">News</a>
             </li>
             <li>
-              <a href="#">Contacts</a>
+              <a href="#contacts">Contacts</a>
             </li>
           </ul>
         </nav>

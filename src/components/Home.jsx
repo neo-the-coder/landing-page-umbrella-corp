@@ -3,7 +3,7 @@ import image from '../assets/bg/bg-1.jpg';
 
 const Home = () => {
   return (
-    <section className={styles.wrapper}>
+    <section className={styles.wrapper} id="home">
       <img src={image} alt="Umbrella Corporation CorVax-HTI Covid-19 vaccine" className={styles.img} />
       <div className={styles.info}>
         <h1><span>FUTURE</span> IS HERE</h1>

@@ -5,7 +5,7 @@ import img3 from '../assets/CorVax-HT1-mini.jpg';
 
 const Products = () => {
   return (
-    <div id="products" className={styles.productContainer}>
+    <section id="products" className={styles.productContainer}>
       <div className={styles.firstImgContainer}>
         <img src={img1} alt="Umbreline" />
         <div className={styles.productInfo}>
@@ -20,7 +20,7 @@ const Products = () => {
       </div>
       <img src={img2} alt="Skin base" />
       <img src={img3} alt="Corvax" />
-    </div>
+    </section>
   );
 };
 

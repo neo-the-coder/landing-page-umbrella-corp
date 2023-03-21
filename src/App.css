@@ -8,6 +8,12 @@
   /* color: white; */
 }
 
+.page4 {
+  background-image: url('./assets/bg/bg-3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 button {
   border: none;
   cursor: pointer;

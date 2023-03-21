@@ -1,0 +1,84 @@
+.container {
+    display: grid;
+    grid-template-columns: minmax(auto, 0.3fr) auto;
+    grid-template-rows: auto;
+}
+
+.labInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 4rem;
+}
+
+.logo {
+    width: 110px;
+    height: 110px;
+}
+
+.labInfo h2 {
+    font-family: 'Michroma', sans-serif;
+    color: #C61C1C;
+    text-align: center;
+    font-size: 1.75rem;
+    margin: 0.5rem 0;
+    -webkit-text-stroke-width: 2.5px;
+    letter-spacing: 4px;
+}
+
+.labInfo > p {
+    font-size: 1rem;
+    text-align: justify;
+    margin-bottom: 0;
+}
+
+.labInfo > button {
+    margin-top: 1.5rem;
+    background-color: #C82121CF;
+    font-size: 0.75rem;
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+}
+
+.container > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 787px) {
+    .container {
+        grid-template-columns: auto;
+    }
+
+    .labInfo {
+        background-image: linear-gradient(0deg,rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../assets/photo-man-microscope.jpg);
+        background-size: cover;
+        background-position: 30%;
+        padding: 1.5rem 0;
+        color: white;
+    }
+
+    .labInfo > p {
+        width: 400px;
+    }
+
+    .labInfo > button {
+        font-size: 0.9rem;
+    }
+
+    .container > img {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 595px) {
+    .labInfo > h2 {
+        font-size: 1.4rem;
+    }
+
+    .labInfo > p {
+        width: 330px;
+    }
+}
