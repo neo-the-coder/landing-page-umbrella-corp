@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Navbar from './components/Navbar';
 import Products from './components/Products';
 import Science from './components/Science';
+import News from './components/News';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Products />
       <div className="page4">
         <Science />
+        <News />
       </div>
     </div>
   );

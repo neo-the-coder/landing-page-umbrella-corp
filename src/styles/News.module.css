@@ -1,0 +1,146 @@
+.container {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.nav {
+    margin: 1rem 0;
+    margin-left: 6.75rem;
+}
+
+.ul {
+    padding-inline: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.ul li a {
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+    border-bottom: 2px solid transparent;
+}
+
+.ul li a:hover {
+    color: #E02323;
+    border-color: #E02323;
+}
+
+.cardContainer {
+    overflow-x: auto;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    margin-left: 6.75rem;
+}
+
+.message {
+    display: inline-block;
+    margin: 5rem auto 1rem;
+}
+
+.message > h1, .message > h4 {
+    margin: 0;
+    text-align: left;
+} 
+
+.message > h4 {
+    font-family: 'Michroma', sans-serif;
+    color: #CE1515;
+    font-size: 1.65vw;
+    -webkit-text-stroke-width: 1.25px;
+    letter-spacing: 4px;
+    margin-bottom: -1.075vw;
+}
+
+.message > h1 {
+    font-size: 5.5vw;
+    font-weight: 600;
+}
+
+.container > button {
+    margin: 0 auto;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.81);
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+}
+
+.container > button > svg {
+    display: block;
+    width: 0.9rem;
+    height: 0.9rem;
+    background-color: transparent;
+}
+
+@media only screen and (max-width: 1000px) {
+    .message {
+        display: block;
+    }
+
+    .message > h1, .message > h4 {
+        text-align: center;
+    } 
+
+    .message > h4 {
+        font-size: 1.2rem;
+    }
+
+    .message > h1 {
+        font-size: 3.5rem;
+    }
+
+    .nav, .cardContainer {
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+
+    .ul {
+        justify-content: center;
+    }
+
+    .cardContainer {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container > button {
+        font-size: 0.9rem;
+        padding: 0.8rem 1.6rem;
+    }
+
+    .container > button svg {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+
+}
+
+@media only screen and (max-width: 787px) {
+    .container {
+        margin: 2rem 0;
+    }
+
+    .nav, .cardContainer {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 595px) {
+    .message > h4 {
+        font-size: 1rem;
+    }
+
+    .message > h1 {
+        font-size: 3rem;
+    }
+}

@@ -11,12 +11,9 @@
     grid-template-rows: repeat(2, auto);
     justify-content: space-between;
     gap: 6rem;
-    padding: 7.5%;
+    /* padding: 7.5%; */
+    padding: 7.334vw;
 }
-
-/* .container * {
-    min-height: 0;
-} */
 
 .facility {  
     display: grid;
@@ -160,6 +157,13 @@
 }
 
 
+@media only screen and (min-width: 1001px) {
+    .products {
+        overflow-x: auto;
+        padding-right: 7.334vw;
+    }
+}
+
 @media only screen and (max-width: 1200px) {
     .facility {
         grid-template-columns: auto;
@@ -218,7 +222,8 @@
     }
     
     .actionButtons {
-        justify-content: space-around;
+        justify-content: space-between;
+        column-gap: 0;
     }
     
     .actionButtons button {
@@ -227,8 +232,8 @@
     }
 
     .actionButtons button svg {
-        width: 1.35rem;
-        height: 1.35rem;
+        width: 1.2rem;
+        height: 1.2rem;
     }
     
     .products {
@@ -251,15 +256,17 @@
     }
 }
 
+@media only screen and (max-width: 700px) {
+    .actionButtons {
+        flex-direction: column;
+        row-gap: 1rem;
+        margin: 0 -1rem;
+    }
+}
+
 @media only screen and (max-width: 595px) {
     .mainText h2 {
         font-size: 1.5rem;
         /* -webkit-text-stroke-width: 1.5px; */
-    }
-
-    .actionButtons button:nth-child(2) {
-        flex-direction: column;
-        row-gap: 0.25rem;
-        padding: 0.8rem;
     }
 }
