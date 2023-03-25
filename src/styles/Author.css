@@ -1,0 +1,25 @@
+#author {
+    padding: 1rem 0.5rem;
+    margin: 0;
+    background: linear-gradient(to right, hsl(0, 56%, 10%), #b23232, hsl(0, 56%, 10%));
+  }
+  
+  #author > p {
+    margin: 0;
+    color: white;
+    font-family: 'Michroma', sans-serif;
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    line-height: 1.5rem;
+    text-align: center;
+  }
+  
+  #author > p:last-child {
+    margin-top: 0.25rem;
+  }
+  
+  #author a {
+    color: white;
+    text-decoration: none;
+  }

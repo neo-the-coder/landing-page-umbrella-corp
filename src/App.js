@@ -6,6 +6,7 @@ import Products from './components/Products';
 import Science from './components/Science';
 import News from './components/News';
 import Footer from './components/Footer';
+import Author from './components/Author';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <News />
       </div>
       <Footer />
+      <Author />
     </div>
   );
 }
