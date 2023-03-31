@@ -23,6 +23,7 @@ const Navbar = () => {
           className={`${styles.navIcon} ${toggleMenu && styles.open}`}
           onClick={() => setToggleMenu((toggle) => !toggle)}
           role="button"
+          aria-label="Toggle the menu"
         >
           <span></span>
           <span></span>
@@ -52,10 +53,10 @@ const Navbar = () => {
             </li>
           </ul>
         </nav>
-        <button className={styles.search}>
+        <button className={styles.search} aria-label="Search">
           <SearchIcon />
         </button>
-        <button className={styles.language}>
+        <button className={styles.language} aria-label="Choose language">
           <Globe />
           <span>English</span>
         </button>

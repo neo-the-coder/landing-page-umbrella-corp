@@ -12,7 +12,7 @@ const Card = ({img, alt}) => {
           do eiusmod. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
           sed do eiusmod.
         </figcaption>
-        <button>
+        <button aria-label="Read more">
           <Arrow className={styles.arrow} />
         </button>
       </div>

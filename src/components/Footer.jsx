@@ -21,22 +21,22 @@ const Footer = () => {
           </div>
           <ul className={styles.socialLinks}>
             <li>
-              <a href="#ig">
+              <a href="#ig" aria-label="Find Us on Instagram">
                 <Instagram />
               </a>
             </li>
             <li>
-              <a href="#fb">
+              <a href="#fb" aria-label="Find Us on Facebook">
                 <Facebook />
               </a>
             </li>
             <li>
-              <a href="#twttr">
+              <a href="#twttr" aria-label="Find Us on Twitter">
                 <Twitter />
               </a>
             </li>
             <li>
-              <a href="#lkdn">
+              <a href="#lkdn" aria-label="Find Us on LinkedIn">
                 <LinkedIn />
               </a>
             </li>
