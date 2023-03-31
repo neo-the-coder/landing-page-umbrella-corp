@@ -1,3 +1,14 @@
+# What if Umbrella Corporation really existed?
+
+Landing page for the Umbrella Corporation.
+
+Coded on a basis of a [design](https://www.figma.com/community/file/1141838491309665072) created by [@letsimagine](https://www.figma.com/@letsimagine)
+
+Live demo: [umbrella-corp-neo.netlify.app](https://umbrella-corp-neo.netlify.app/)
+
+**Disclaimer:** All rights are reserved to their respective owners. Resident Evil is a property of CAPCOM.
+<br/>
+<br/>
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
