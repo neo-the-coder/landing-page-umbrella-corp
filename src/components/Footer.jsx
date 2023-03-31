@@ -9,7 +9,7 @@ import {ReactComponent as UnicefLogo} from '../assets/UNICEF_logo.svg';
 
 const Footer = () => {
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} id="contacts">
       <section className={styles.firstRow}>
         <div className={styles.logoSocials}>
           <div>

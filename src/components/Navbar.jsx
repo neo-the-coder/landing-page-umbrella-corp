@@ -7,6 +7,7 @@ import {ReactComponent as Globe} from '../assets/icons/Globe.svg';
 
 const Navbar = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
+    const closeMenu = () => setToggleMenu(false);
 
   return (
     <header>
@@ -20,7 +21,7 @@ const Navbar = () => {
         </div>
         <div
         //   id="nav-icon"
-          className={`${styles.navIcon} ${toggleMenu && styles.open}`}
+          className={`${styles.navIcon} ${toggleMenu ? styles.open : ""}`}
           onClick={() => setToggleMenu((toggle) => !toggle)}
           role="button"
           aria-label="Toggle the menu"
@@ -34,22 +35,22 @@ const Navbar = () => {
         <nav className={styles.mainNav}>
           <ul>
             <li>
-              <a href="#home">Home</a>
+              <a onClick={closeMenu} href="#home">Home</a>
             </li>
             <li>
-              <a href="#about">About</a>
+              <a onClick={closeMenu} href="#about">About</a>
             </li>
             <li>
-              <a href="#products">Products</a>
+              <a onClick={closeMenu} href="#products">Products</a>
             </li>
             <li>
-              <a href="#science">Science</a>
+              <a onClick={closeMenu} href="#science">Science</a>
             </li>
             <li>
-              <a href="#news">News</a>
+              <a onClick={closeMenu} href="#news">News</a>
             </li>
             <li>
-              <a href="#contacts">Contacts</a>
+              <a onClick={closeMenu} href="#contacts">Contacts</a>
             </li>
           </ul>
         </nav>
